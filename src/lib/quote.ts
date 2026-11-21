@@ -1,5 +1,3 @@
-"use server";
-
 export type QuoteFieldErrors = Partial<Record<"name" | "company" | "email" | "message", string>>;
 
 export type QuoteState = {
@@ -11,8 +9,9 @@ export type QuoteState = {
 const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 /**
- * Validates the quote request. Portfolio demo: nothing is stored or sent.
- * Wire this to email or a CRM before using it on a real site.
+ * Validates the quote request in the browser. The site is a static export, so there is no server.
+ * Portfolio demo: nothing is stored or sent. To go live, POST the values to a form endpoint
+ * (for example a Cloudflare Worker or a form service) after validation passes.
  */
 export async function submitQuote(_prev: QuoteState, formData: FormData): Promise<QuoteState> {
   const get = (k: string) => String(formData.get(k) ?? "").trim();

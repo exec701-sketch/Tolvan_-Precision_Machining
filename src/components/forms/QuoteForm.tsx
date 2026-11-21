@@ -2,7 +2,7 @@
 
 import { useActionState, useEffect, useRef } from "react";
 import { CircleAlert, CircleCheck } from "lucide-react";
-import { submitQuote, type QuoteFieldErrors, type QuoteState } from "@/app/contact/actions";
+import { submitQuote, type QuoteFieldErrors, type QuoteState } from "@/lib/quote";
 import { contactPage } from "@/content/contact";
 import { buttonClass } from "@/components/ui/Button";
 

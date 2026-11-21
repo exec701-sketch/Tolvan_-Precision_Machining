@@ -29,5 +29,5 @@ Every page is checked with axe-core (WCAG 2.1 A/AA plus best practices) and has 
 
 ## Before going live
 
-- The quote form (`src/app/contact/actions.ts`) only validates input. Connect it to email or a CRM.
+- The quote form (`src/lib/quote.ts`) only validates input in the browser. Connect it to a form endpoint (for example a Cloudflare Worker) or a CRM.
 - Contact details, certifications and equipment are placeholders.
