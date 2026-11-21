@@ -1,36 +1,33 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Tolvane Precision Machining
 
-## Getting Started
+Portfolio concept site for a fictional contract CNC shop. Tagline: *Tolerances held. Deadlines kept.*
 
-First, run the development server:
+Next.js 16 (App Router) · TypeScript · Tailwind CSS 4.
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev     # http://localhost:3000
+npm run build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Structure
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- `src/content/`: all copy, one file per page plus `site.ts` (brand, contact, nav, footer). Edit text here, not in components.
+- `src/components/ui/`: primitives (Section, Container, Button, SectionHeading, icon maps).
+- `src/components/sections/`: page sections; `home/` holds the homepage set.
+- `src/app/`: routes: `/`, `/capabilities`, `/industries`, `/quality`, `/equipment`, `/about`, `/contact`.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Design system
 
-## Learn More
+Tokens come from `Tolvane_Design_System.md` and live in `src/app/globals.css` under `@theme`. The default Tailwind palette is cleared, so only design-system colors exist as utilities.
 
-To learn more about Next.js, take a look at the following resources:
+Sections alternate dark and light. Every page starts with an ink hero and ends with the ink quote band, so the surface footer always follows a dark section.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Accessibility
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Every page is checked with axe-core (WCAG 2.1 A/AA plus best practices) and has no violations. Text over the blueprint grid was checked by hand, with a minimum of 5.12:1. Focus rings are blueprint on light sections and amber on dark ones, switched by `data-tone`.
 
-## Deploy on Vercel
+## Before going live
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- The quote form (`src/app/contact/actions.ts`) only validates input. Connect it to email or a CRM.
+- Contact details, certifications and equipment are placeholders.
