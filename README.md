@@ -10,6 +10,14 @@ npm run dev     # http://localhost:3000
 npm run build
 ```
 
+## Deploy (Cloudflare)
+
+The site is a static export (`out/`) served as Cloudflare Workers static assets (`wrangler.jsonc`).
+
+- Local check: `npm run preview`, then open http://localhost:8787
+- Git-connected (Workers Builds): build command `npm run build`, deploy command `npx wrangler deploy`
+- Manual: `npm run deploy` (runs `wrangler login` the first time)
+
 ## Structure
 
 - `src/content/`: all copy, one file per page plus `site.ts` (brand, contact, nav, footer). Edit text here, not in components.
