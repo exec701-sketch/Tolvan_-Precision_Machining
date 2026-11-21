@@ -1,26 +1,104 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/*
+ * Design tokens: Tolvane_Design_System.md is the source of truth.
+ * The default Tailwind palette is cleared, so only these colors exist as utilities.
+ * Every text pairing used on the site appears in that file's contrast table.
+ */
+@theme {
+  --color-*: initial;
+
+  /* Core */
+  --color-ink: #14181d;
+  --color-surface: #ffffff;
+  --color-subtle: #eef1f4;
+  --color-white: #ffffff;
+  --color-steel-700: #4a5663;
+  --color-steel-400: #8a96a3;
+  --color-steel-300: #b8c2cc;
+  --color-steel-200: #cbd3db;
+  --color-blueprint: #1f4e79;
+  --color-sky: #6fb1e0;
+  --color-amber: #f2a900;
+
+  /* Component states (design system section 5) */
+  --color-blueprint-deep: #173b5c; /* primary-on-light hover */
+  --color-amber-bright: #ffc233; /* primary-on-dark hover */
+  --color-ink-raised: #1e252d; /* card fill on ink */
+  --color-ink-line: #2e3844; /* card border on ink */
+
+  /* Status (no red) */
+  --color-success: #2e7d4f;
+  --color-warning: #9a5b00;
+  --color-danger: #b34700;
+
+  /* Type */
+  --font-sans: var(--font-archivo), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-plex-mono), ui-monospace, monospace;
+
+  /* Layout */
+  --container-page: 76rem;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      transition-duration: 0.01ms !important;
+      animation-duration: 0.01ms !important;
+    }
+  }
+
+  body {
+    background-color: var(--color-surface);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+  }
+
+  /* Focus ring: 3px, 2px offset. Blueprint on light, amber on dark. */
+  :focus-visible {
+    outline: 3px solid var(--color-blueprint);
+    outline-offset: 2px;
+  }
+  [data-tone="dark"] :focus-visible {
+    outline-color: var(--color-amber);
+  }
+
+  /* Links inside running copy: underlined, per tone */
+  .prose-link {
+    color: var(--color-blueprint);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  [data-tone="dark"] .prose-link {
+    color: var(--color-sky);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer utilities {
+  /* Blueprint grid used behind dark sections. Lines use the ink-line token. */
+  .bg-grid {
+    background-image:
+      linear-gradient(var(--color-ink-line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--color-ink-line) 1px, transparent 1px);
+    background-size: 48px 48px;
+    background-position: -1px -1px;
+  }
+  /* Faint grid for light sections. */
+  .bg-grid-light {
+    background-image:
+      linear-gradient(var(--color-subtle) 1px, transparent 1px),
+      linear-gradient(90deg, var(--color-subtle) 1px, transparent 1px);
+    background-size: 48px 48px;
+    background-position: -1px -1px;
+  }
 }
