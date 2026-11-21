@@ -1,13 +1,22 @@
-import { Container, Section } from "@/components/ui/Section";
+import { Hero } from "@/components/sections/home/Hero";
+import { Capabilities } from "@/components/sections/home/Capabilities";
+import { Certifications } from "@/components/sections/home/Certifications";
+import { Process } from "@/components/sections/home/Process";
+import { Standard } from "@/components/sections/home/Standard";
+import { Careers } from "@/components/sections/home/Careers";
+import { QuoteBand } from "@/components/sections/QuoteBand";
 
+// Rhythm: ink → surface → ink → subtle → ink → surface → ink → (footer) surface
 export default function HomePage() {
   return (
-    <Section tone="ink" grid labelledBy="home-title">
-      <Container className="py-24">
-        <h1 id="home-title" className="text-4xl font-bold">
-          Homepage sections coming next.
-        </h1>
-      </Container>
-    </Section>
+    <>
+      <Hero />
+      <Capabilities />
+      <Certifications />
+      <Process />
+      <Standard />
+      <Careers />
+      <QuoteBand />
+    </>
   );
 }
