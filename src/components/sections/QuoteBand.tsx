@@ -8,10 +8,11 @@ type QuoteBandProps = {
   eyebrow?: string;
   title?: string;
   body?: string;
+  showQuoteButton?: boolean;
 };
 
 /** Ink call-to-action band. Every page ends with it so the surface footer always follows a dark band. */
-export function QuoteBand({ eyebrow = quoteBand.eyebrow, title = quoteBand.title, body = quoteBand.body }: QuoteBandProps) {
+export function QuoteBand({ eyebrow = quoteBand.eyebrow, title = quoteBand.title, body = quoteBand.body, showQuoteButton = true }: QuoteBandProps) {
   return (
     <Section tone="ink" labelledBy="quote-band-title" className="relative overflow-hidden">
       <span aria-hidden="true" className="absolute inset-y-0 left-0 w-1.5 bg-amber" />
@@ -24,10 +25,12 @@ export function QuoteBand({ eyebrow = quoteBand.eyebrow, title = quoteBand.title
           <p className="mt-4 max-w-2xl text-lg leading-relaxed text-steel-300">{body}</p>
         </div>
         <div className="flex flex-col gap-4 sm:flex-row lg:col-span-4 lg:flex-col lg:items-stretch">
-          <ButtonLink href={quoteBand.primary.href} tone="dark">
+          {showQuoteButton && (
+            <ButtonLink href={quoteBand.primary.href} tone="dark">
             {quoteBand.primary.label}
             <ArrowRight aria-hidden="true" className="size-5" />
           </ButtonLink>
+          )}
           <ButtonLink href={contact.phoneHref} tone="dark" variant="secondary">
             <Phone aria-hidden="true" className="size-5" />
             {contact.phoneDisplay}
