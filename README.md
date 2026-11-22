@@ -39,3 +39,4 @@ Every page is checked with axe-core (WCAG 2.1 A/AA plus best practices) and has 
 
 - The quote form (`src/lib/quote.ts`) only validates input in the browser. Connect it to a form endpoint (for example a Cloudflare Worker) or a CRM.
 - Contact details, certifications and equipment are placeholders.
+- Add photos: save `parts-closeup.jpg`, `five-axis-machine.jpg`, `cmm-inspection.jpg` and `shop-floor.jpg` (3:2, 1800 px wide or more) in `public/images/`. Each appears on the site automatically at the next build. See `src/content/images.ts`.

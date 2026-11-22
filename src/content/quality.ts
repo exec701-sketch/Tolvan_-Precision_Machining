@@ -10,12 +10,6 @@ export const qualityPage = {
     title: "Inspection is part of the process, not the end of it.",
     intro:
       "Our quality system is audited by third-party registrars and by the customers who rely on us. Every part is measured against the drawing before it leaves.",
-    facts: [
-      { label: "Customer reject rate", value: "0.21%" },
-      { label: "First-pass FAI yield", value: "97%" },
-      { label: "Lab temperature", value: "68 ±1 °F" },
-      { label: "Supplier audits passed", value: "40+" },
-    ],
   },
   certs: {
     eyebrow: "Certifications",

@@ -158,11 +158,6 @@ export const standard = {
       body: "Inspection results travel with the parts, not on request weeks later.",
     },
   ],
-  stats: [
-    { value: "98.6%", label: "On-time delivery" },
-    { value: "0.21%", label: "Customer reject rate" },
-    { value: "22 yr", label: "Average machinist tenure" },
-  ],
 };
 
 export const careers = {

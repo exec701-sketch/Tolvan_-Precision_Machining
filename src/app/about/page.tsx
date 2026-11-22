@@ -6,6 +6,7 @@ import { QuoteBand } from "@/components/sections/QuoteBand";
 import { ButtonLink } from "@/components/ui/Button";
 import { Container, Section } from "@/components/ui/Section";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { Photo } from "@/components/ui/Photo";
 
 export const metadata: Metadata = p.meta;
 
@@ -17,7 +18,7 @@ export default function AboutPage() {
       <Section tone="surface" labelledBy="story-title">
         <Container className="grid gap-12 py-20 lg:grid-cols-12 lg:py-24">
           <div className="lg:col-span-7">
-            <SectionHeading id="story-title" index="01" eyebrow={p.story.eyebrow} title={p.story.title} />
+            <SectionHeading id="story-title" title={p.story.title} />
             <div className="mt-8 space-y-5 text-lg leading-relaxed text-steel-700">
               {p.story.paragraphs.map((para) => (
                 <p key={para.slice(0, 24)}>{para}</p>
@@ -25,6 +26,7 @@ export default function AboutPage() {
             </div>
           </div>
           <div className="lg:col-span-4 lg:col-start-9">
+            <Photo name="floor" className="mb-10" sizes="(min-width: 1024px) 33vw, 100vw" />
             <h3 className="font-mono text-sm uppercase tracking-widest text-blueprint">Milestones</h3>
             <ol className="mt-6 border-l-2 border-steel-200">
               {p.story.timeline.map((t) => (
@@ -39,12 +41,12 @@ export default function AboutPage() {
         </Container>
       </Section>
 
-      <Section tone="ink" grid labelledBy="values-title">
+      <Section tone="ink" labelledBy="values-title">
         <Container className="py-20 lg:py-24">
-          <SectionHeading id="values-title" index="02" eyebrow={p.values.eyebrow} title={p.values.title} dark />
+          <SectionHeading id="values-title" title={p.values.title} dark />
           <ul className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {p.values.items.map((v) => (
-              <li key={v.title} className="border border-ink-line border-t-2 border-t-amber bg-ink-raised p-6">
+              <li key={v.title} className="border border-ink-line bg-ink-raised p-6">
                 <h3 className="text-lg font-bold text-white">{v.title}</h3>
                 <p className="mt-2 leading-relaxed text-steel-300">{v.body}</p>
               </li>
@@ -56,19 +58,19 @@ export default function AboutPage() {
       <Section tone="subtle" id="careers" labelledBy="careers-page-title">
         <Container className="grid gap-12 py-20 lg:grid-cols-12 lg:py-24">
           <div className="lg:col-span-5">
-            <SectionHeading id="careers-page-title" index="03" eyebrow={p.careers.eyebrow} title={p.careers.title} intro={p.careers.intro} />
+            <SectionHeading id="careers-page-title" title={p.careers.title} intro={p.careers.intro} />
             <h3 className="mt-10 font-mono text-sm uppercase tracking-widest text-blueprint">{p.careers.benefitsHeading}</h3>
             <ul className="mt-4 space-y-2">
               {p.careers.benefits.map((b) => (
                 <li key={b} className="flex gap-3">
-                  <Check aria-hidden="true" className="mt-1 size-4 shrink-0 text-blueprint" strokeWidth={3} />
+                  <Check aria-hidden="true" className="mt-1 size-4 shrink-0 text-blueprint" />
                   <span>{b}</span>
                 </li>
               ))}
             </ul>
           </div>
           <div className="lg:col-span-6 lg:col-start-7">
-            <h3 className="text-2xl font-bold tracking-tight">{p.careers.rolesHeading}</h3>
+            <h3 className="text-2xl font-bold">{p.careers.rolesHeading}</h3>
             <ul className="mt-6 space-y-3">
               {p.careers.roles.map((r) => (
                 <li key={r.title} className="flex flex-col gap-1 border border-steel-200 bg-surface p-5 sm:flex-row sm:items-center sm:justify-between">

@@ -122,3 +122,31 @@ colors: {
   danger: '#B34700',
 }
 ```
+
+## 8. Typography
+
+| Role | Face | Notes |
+|---|---|---|
+| Display (h1 to h3) | Archivo, width 112%, bold | Expanded width echoes the logo wordmark. Letter spacing -0.015em. |
+| Body | IBM Plex Sans 400 to 700 | Engineering grotesk; 16 to 18px, line-height about 1.6. |
+| Data and labels | IBM Plex Mono 400/500 | Specs, table figures, small labels. Tabular by design. |
+
+## 9. Signature move
+
+The capability sheet: the hero's inspection-readout panel with a dimensioned part drawing, corner registration marks and spec values in mono. The blueprint grid appears only behind the hero, where it frames that measurement panel; it is not used as texture elsewhere.
+
+## 10. Rules from the deslop audit
+
+- No kicker labels or 01/02/03 markers above section headings. Numbers only where content is a real sequence (the five-step process).
+- No one-side accent strips on cards or bands.
+- Stat rows only where the numbers are capability data (hero sheet, capabilities page). No metric triptychs.
+- One icon system: Lucide at 1.5 stroke with square caps and mitred joins (set globally on `.lucide`).
+- Numeric table columns right-aligned with tabular figures.
+- Photography: real photos of parts and the shop. Slots are defined in `src/content/images.ts` and appear only when the file exists in `public/images/`.
+
+## 11. Audit log
+
+| Date | Score | Notes |
+|---|---|---|
+| 2026-11-21 | 6/10 | First audit: decorative grid, numbered kickers, stat blocks everywhere, one font for everything, icon-above-heading cards, side strips, mixed icon strokes, left-aligned numbers, nested card, fake live status, no photos. |
+| 2026-11-21 | 8/10 | High and medium findings fixed except photography, which is waiting on real photos (slots in place). Axe: 0 violations on all pages (WCAG 2.2 AA tags included). |

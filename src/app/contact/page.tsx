@@ -17,7 +17,7 @@ export default function ContactPage() {
       <Section tone="surface" id="quote" labelledBy="quote-form-title">
         <Container className="grid gap-12 py-16 lg:grid-cols-12 lg:py-20">
           <div className="lg:col-span-8">
-            <h2 id="quote-form-title" className="text-3xl font-bold tracking-tight">
+            <h2 id="quote-form-title" className="text-3xl font-bold">
               {p.form.heading}
             </h2>
             <div className="mt-6">

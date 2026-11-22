@@ -15,7 +15,7 @@ export default function IndustriesPage() {
 
       <Section tone="surface" labelledBy="industries-title">
         <Container className="py-20 lg:py-24">
-          <SectionHeading id="industries-title" index="01" eyebrow={p.listHeading.eyebrow} title={p.listHeading.title} />
+          <SectionHeading id="industries-title" title={p.listHeading.title} />
           <div className="mt-12 grid gap-6 md:grid-cols-2">
             {p.items.map((ind) => {
               const Icon = industryIcons[ind.id];
@@ -24,11 +24,11 @@ export default function IndustriesPage() {
                   key={ind.id}
                   id={ind.id}
                   aria-labelledby={`${ind.id}-title`}
-                  className="flex scroll-mt-28 flex-col border border-steel-200 border-t-4 border-t-blueprint bg-subtle p-7"
+                  className="flex scroll-mt-28 flex-col border border-steel-200 bg-subtle p-7"
                 >
                   <div className="flex items-center gap-3">
-                    <Icon aria-hidden="true" className="size-7 text-blueprint" strokeWidth={1.5} />
-                    <h3 id={`${ind.id}-title`} className="text-2xl font-bold tracking-tight">
+                    <Icon aria-hidden="true" className="size-7 text-blueprint" />
+                    <h3 id={`${ind.id}-title`} className="text-2xl font-bold">
                       {ind.label}
                     </h3>
                   </div>

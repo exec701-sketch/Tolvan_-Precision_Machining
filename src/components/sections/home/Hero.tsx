@@ -10,7 +10,7 @@ export function Hero() {
       <Container className="grid items-center gap-12 py-20 lg:grid-cols-12 lg:py-28">
         <div className="lg:col-span-7">
           <p className="font-mono text-sm uppercase tracking-widest text-sky">{hero.eyebrow}</p>
-          <h1 id="hero-title" className="mt-5 text-balance text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
+          <h1 id="hero-title" className="mt-5 text-balance text-4xl font-bold text-white sm:text-5xl">
             {hero.title}
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-steel-300">{hero.body}</p>
@@ -41,11 +41,8 @@ function ReadoutPanel() {
       <span aria-hidden="true" className="absolute -bottom-px -right-px h-4 w-4 border-b-2 border-r-2 border-amber" />
 
       <figcaption className="flex items-center justify-between border-b border-ink-line px-5 py-3 font-mono text-xs uppercase tracking-widest text-steel-300">
-        <span>Shop readout</span>
-        <span className="flex items-center gap-2">
-          <span aria-hidden="true" className="size-2 rounded-full bg-amber" />
-          In tolerance
-        </span>
+        <span>Capability sheet</span>
+        <span>Rev. 2026</span>
       </figcaption>
 
       <DimensionGraphic />

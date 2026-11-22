@@ -5,6 +5,7 @@ import { PageHero } from "@/components/sections/PageHero";
 import { QuoteBand } from "@/components/sections/QuoteBand";
 import { Container, Section } from "@/components/ui/Section";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { Photo } from "@/components/ui/Photo";
 
 export const metadata: Metadata = p.meta;
 
@@ -15,11 +16,11 @@ export default function QualityPage() {
 
       <Section tone="surface" labelledBy="certs-title">
         <Container className="py-20 lg:py-24">
-          <SectionHeading id="certs-title" index="01" eyebrow={p.certs.eyebrow} title={p.certs.title} />
+          <SectionHeading id="certs-title" title={p.certs.title} />
           <ul className="mt-12 grid gap-6 md:grid-cols-2">
             {p.certs.items.map((c) => (
               <li key={c.code} className="flex gap-5 border border-steel-200 bg-subtle p-7">
-                <ShieldCheck aria-hidden="true" className="size-10 shrink-0 text-blueprint" strokeWidth={1.5} />
+                <ShieldCheck aria-hidden="true" className="size-10 shrink-0 text-blueprint" />
                 <div>
                   <h3 className="font-mono text-2xl font-medium">{c.code}</h3>
                   <p className="mt-1 font-semibold text-blueprint">{c.name}</p>
@@ -32,16 +33,14 @@ export default function QualityPage() {
         </Container>
       </Section>
 
-      <Section tone="ink" grid id="lab" labelledBy="lab-title">
+      <Section tone="ink" id="lab" labelledBy="lab-title">
         <Container className="py-20 lg:py-24">
-          <SectionHeading id="lab-title" index="02" eyebrow={p.lab.eyebrow} title={p.lab.title} intro={p.lab.intro} dark />
+          <SectionHeading id="lab-title" title={p.lab.title} intro={p.lab.intro} dark />
+          <Photo name="inspection" className="mt-12" sizes="(min-width: 1280px) 1200px, 100vw" />
           <ul className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {p.lab.items.map((item, i) => (
+            {p.lab.items.map((item) => (
               <li key={item.title} className="border border-ink-line bg-ink-raised p-6">
-                <span aria-hidden="true" className="font-mono text-sm text-amber">
-                  {String(i + 1).padStart(2, "0")}
-                </span>
-                <h3 className="mt-3 text-lg font-bold text-white">{item.title}</h3>
+                <h3 className="text-lg font-bold text-white">{item.title}</h3>
                 <p className="mt-2 leading-relaxed text-steel-300">{item.body}</p>
               </li>
             ))}
@@ -51,7 +50,7 @@ export default function QualityPage() {
 
       <Section tone="subtle" id="documentation" labelledBy="docs-title">
         <Container className="py-20 lg:py-24">
-          <SectionHeading id="docs-title" index="03" eyebrow={p.docs.eyebrow} title={p.docs.title} intro={p.docs.intro} />
+          <SectionHeading id="docs-title" title={p.docs.title} intro={p.docs.intro} />
           <div className="mt-12 grid gap-6 md:grid-cols-2">
             <DocList heading="Included with every order" items={p.docs.standard} />
             <DocList heading="Available on request" items={p.docs.onRequest} />
@@ -71,7 +70,7 @@ function DocList({ heading, items }: { heading: string; items: readonly string[]
       <ul className="mt-5 space-y-3">
         {items.map((item) => (
           <li key={item} className="flex gap-3">
-            <Check aria-hidden="true" className="mt-1 size-4 shrink-0 text-blueprint" strokeWidth={3} />
+            <Check aria-hidden="true" className="mt-1 size-4 shrink-0 text-blueprint" />
             <span>{item}</span>
           </li>
         ))}

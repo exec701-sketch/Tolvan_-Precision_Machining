@@ -7,9 +7,9 @@ export function Careers() {
   return (
     <Section tone="surface" labelledBy="careers-title">
       <Container className="py-20 lg:py-24">
-        <div className="grid gap-10 border-l-4 border-blueprint pl-6 sm:pl-10 lg:grid-cols-12 lg:items-center">
+        <div className="grid gap-10 lg:grid-cols-12 lg:items-center">
           <div className="lg:col-span-7">
-            <SectionHeading id="careers-title" index="05" eyebrow={careers.eyebrow} title={careers.title} intro={careers.body} />
+            <SectionHeading id="careers-title" title={careers.title} intro={careers.body} />
             <div className="mt-8">
               <ButtonLink href={careers.cta.href} tone="light" variant="secondary">
                 {careers.cta.label}

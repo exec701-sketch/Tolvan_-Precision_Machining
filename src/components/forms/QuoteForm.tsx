@@ -99,7 +99,7 @@ export function QuoteForm() {
         </label>
       </div>
 
-      <p className="border-l-4 border-blueprint bg-subtle px-4 py-3 text-steel-700">{f.filesNote}</p>
+      <p className="bg-subtle px-4 py-3 text-steel-700">{f.filesNote}</p>
 
       <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-6">
         <button type="submit" disabled={pending} className={`${buttonClass("primary", "light")} disabled:cursor-wait`}>

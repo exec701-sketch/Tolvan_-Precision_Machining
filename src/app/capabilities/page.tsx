@@ -6,6 +6,7 @@ import { PageHero } from "@/components/sections/PageHero";
 import { QuoteBand } from "@/components/sections/QuoteBand";
 import { Container, Section } from "@/components/ui/Section";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { Photo } from "@/components/ui/Photo";
 
 export const metadata: Metadata = c.meta;
 
@@ -19,15 +20,16 @@ export default function CapabilitiesPage() {
       {/* Services: surface */}
       <Section tone="surface" labelledBy="services-title">
         <Container className="py-20 lg:py-24">
-          <SectionHeading id="services-title" index="01" eyebrow={c.services.eyebrow} title={c.services.title} />
+          <SectionHeading id="services-title" title={c.services.title} />
+          <Photo name="parts" className="mt-12" sizes="(min-width: 1280px) 1200px, 100vw" />
           <div className="mt-12 divide-y divide-steel-200 border-y border-steel-200">
             {c.services.items.map((s, i) => {
               const Icon = capabilityIcons[iconKeys[i]];
               return (
                 <article key={s.id} id={s.id} aria-labelledby={`${s.id}-title`} className="grid scroll-mt-28 gap-6 py-10 lg:grid-cols-12">
                   <div className="flex items-start gap-4 lg:col-span-4">
-                    <Icon aria-hidden="true" className="size-8 shrink-0 text-blueprint" strokeWidth={1.5} />
-                    <h3 id={`${s.id}-title`} className="text-2xl font-bold tracking-tight">
+                    <Icon aria-hidden="true" className="size-8 shrink-0 text-blueprint" />
+                    <h3 id={`${s.id}-title`} className="text-2xl font-bold">
                       {s.title}
                     </h3>
                   </div>
@@ -35,7 +37,7 @@ export default function CapabilitiesPage() {
                   <ul className="space-y-2 lg:col-span-4">
                     {s.bullets.map((b) => (
                       <li key={b} className="flex gap-3">
-                        <Check aria-hidden="true" className="mt-1 size-4 shrink-0 text-blueprint" strokeWidth={3} />
+                        <Check aria-hidden="true" className="mt-1 size-4 shrink-0 text-blueprint" />
                         <span>{b}</span>
                       </li>
                     ))}
@@ -50,7 +52,7 @@ export default function CapabilitiesPage() {
       {/* Tolerances: ink */}
       <Section tone="ink" id="tolerances" labelledBy="tolerances-title">
         <Container className="py-20 lg:py-24">
-          <SectionHeading id="tolerances-title" index="02" eyebrow={c.tolerances.eyebrow} title={c.tolerances.title} intro={c.tolerances.intro} dark />
+          <SectionHeading id="tolerances-title" title={c.tolerances.title} intro={c.tolerances.intro} dark />
           <div
             role="region"
             aria-label="Tolerance table (scrolls horizontally on small screens)"
@@ -61,8 +63,8 @@ export default function CapabilitiesPage() {
               <caption className="sr-only">Typical tolerances and finishes by machining process</caption>
               <thead className="bg-ink-raised">
                 <tr>
-                  {c.tolerances.columns.map((col) => (
-                    <th key={col} scope="col" className="px-5 py-4 font-mono text-sm font-medium uppercase tracking-wider text-sky">
+                  {c.tolerances.columns.map((col, i) => (
+                    <th key={col} scope="col" className={`px-5 py-4 ${i > 0 ? "text-right" : ""} font-mono text-sm font-medium uppercase tracking-wider text-sky`}>
                       {col}
                     </th>
                   ))}
@@ -75,7 +77,7 @@ export default function CapabilitiesPage() {
                       {process}
                     </th>
                     {cells.map((cell, i) => (
-                      <td key={i} className="px-5 py-4 font-mono text-steel-300">
+                      <td key={i} className="px-5 py-4 text-right font-mono tabular-nums text-steel-300">
                         {cell}
                       </td>
                     ))}
@@ -90,7 +92,7 @@ export default function CapabilitiesPage() {
       {/* Materials: subtle */}
       <Section tone="subtle" id="materials" labelledBy="materials-title">
         <Container className="py-20 lg:py-24">
-          <SectionHeading id="materials-title" index="03" eyebrow={c.materials.eyebrow} title={c.materials.title} intro={c.materials.intro} />
+          <SectionHeading id="materials-title" title={c.materials.title} intro={c.materials.intro} />
           <ul className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {c.materials.groups.map((g) => (
               <li key={g.name} className="border border-steel-200 bg-surface p-6">
@@ -110,7 +112,7 @@ export default function CapabilitiesPage() {
       <Section tone="ink" id="finishes" labelledBy="finishes-title">
         <Container className="grid gap-10 py-20 lg:grid-cols-12 lg:py-24">
           <div className="lg:col-span-5">
-            <SectionHeading id="finishes-title" index="04" eyebrow={c.finishes.eyebrow} title={c.finishes.title} intro={c.finishes.intro} dark />
+            <SectionHeading id="finishes-title" title={c.finishes.title} intro={c.finishes.intro} dark />
           </div>
           <ul className="grid content-start gap-px bg-ink-line sm:grid-cols-2 lg:col-span-7">
             {c.finishes.items.map((f) => (
@@ -127,7 +129,7 @@ export default function CapabilitiesPage() {
       <Section tone="surface" id="faq" labelledBy="faq-title">
         <Container className="grid gap-10 py-20 lg:grid-cols-12 lg:py-24">
           <div className="lg:col-span-4">
-            <SectionHeading id="faq-title" index="05" eyebrow={c.faq.eyebrow} title={c.faq.title} />
+            <SectionHeading id="faq-title" title={c.faq.title} />
           </div>
           <div className="divide-y divide-steel-200 border-y border-steel-200 lg:col-span-8">
             {c.faq.items.map((item) => (

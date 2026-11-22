@@ -15,11 +15,10 @@ type QuoteBandProps = {
 export function QuoteBand({ eyebrow = quoteBand.eyebrow, title = quoteBand.title, body = quoteBand.body, showQuoteButton = true }: QuoteBandProps) {
   return (
     <Section tone="ink" labelledBy="quote-band-title" className="relative overflow-hidden">
-      <span aria-hidden="true" className="absolute inset-y-0 left-0 w-1.5 bg-amber" />
       <Container className="grid gap-10 py-16 lg:grid-cols-12 lg:items-center lg:py-20">
         <div className="lg:col-span-8">
           <p className="font-mono text-sm uppercase tracking-widest text-sky">{eyebrow}</p>
-          <h2 id="quote-band-title" className="mt-4 text-balance text-3xl font-bold tracking-tight text-white sm:text-4xl">
+          <h2 id="quote-band-title" className="mt-4 text-balance text-3xl font-bold text-white sm:text-4xl">
             {title}
           </h2>
           <p className="mt-4 max-w-2xl text-lg leading-relaxed text-steel-300">{body}</p>

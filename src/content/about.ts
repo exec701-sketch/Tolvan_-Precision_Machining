@@ -10,12 +10,6 @@ export const aboutPage = {
     title: "A machine shop run by machinists.",
     intro:
       "Tolvane started in 2004 with two used lathes and a promise to hold the print. Today we're 70 people, but the people answering your calls still know how to run the machines.",
-    facts: [
-      { label: "Founded", value: "2004" },
-      { label: "Team members", value: "70" },
-      { label: "Active customers", value: "140+" },
-      { label: "Location", value: "Grand Rapids, MI" },
-    ],
   },
   story: {
     eyebrow: "Our story",

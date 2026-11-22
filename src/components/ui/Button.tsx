@@ -5,7 +5,7 @@ type Variant = "primary" | "secondary";
 type ButtonTone = "light" | "dark";
 
 const base =
-  "inline-flex min-h-11 items-center justify-center gap-2 px-5 py-2.5 text-base font-semibold tracking-tight transition-colors";
+  "inline-flex min-h-11 items-center justify-center gap-2 px-5 py-2.5 text-base font-semibold transition-colors";
 
 const styles: Record<ButtonTone, Record<Variant, string>> = {
   light: {

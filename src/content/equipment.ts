@@ -14,12 +14,6 @@ export const equipmentPage = {
     title: "Modern machines, maintained like they matter.",
     intro:
       "Our equipment runs on a preventive maintenance schedule and is checked for accuracy every quarter, because a machine is only as precise as its last calibration.",
-    facts: [
-      { label: "CNC machines", value: "20" },
-      { label: "Average machine age", value: "4.5 yr" },
-      { label: "Shop floor", value: "38,000 ft²" },
-      { label: "Shifts", value: "2 + lights-out" },
-    ],
   },
   machining: {
     eyebrow: "Machining",

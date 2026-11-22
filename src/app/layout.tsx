@@ -1,13 +1,22 @@
 import type { Metadata } from "next";
-import { Archivo, IBM_Plex_Mono } from "next/font/google";
+import { Archivo, IBM_Plex_Mono, IBM_Plex_Sans } from "next/font/google";
 import { SiteHeader } from "@/components/layout/SiteHeader";
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import { brand } from "@/content/site";
 import "./globals.css";
 
+// Display: Archivo at an expanded width, echoing the logo wordmark.
 const archivo = Archivo({
   variable: "--font-archivo",
   subsets: ["latin"],
+  axes: ["wdth"],
+});
+
+// Body: IBM Plex Sans, an engineering grotesk that pairs with Plex Mono for data.
+const plexSans = IBM_Plex_Sans({
+  variable: "--font-plex-sans",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
 });
 
 const plexMono = IBM_Plex_Mono({
@@ -26,7 +35,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" className={`${archivo.variable} ${plexMono.variable} antialiased`}>
+    <html lang="en" className={`${archivo.variable} ${plexSans.variable} ${plexMono.variable} antialiased`}>
       <body className="flex min-h-dvh flex-col">
         <a
           href="#main"

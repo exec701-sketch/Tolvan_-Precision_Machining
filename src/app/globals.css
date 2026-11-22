@@ -33,7 +33,8 @@
   --color-danger: #b34700;
 
   /* Type */
-  --font-sans: var(--font-archivo), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-plex-sans), ui-sans-serif, sans-serif;
+  --font-display: var(--font-archivo), ui-sans-serif, sans-serif;
   --font-mono: var(--font-plex-mono), ui-monospace, monospace;
 
   /* Layout */
@@ -58,6 +59,20 @@
     }
   }
 
+  /* Headings use the expanded display face; body stays in Plex Sans. */
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    font-stretch: 112%;
+    letter-spacing: -0.015em;
+  }
+
+  /* Sticky header is ~73px: keep focused and anchored content clear of it. */
+  html {
+    scroll-padding-top: 6rem;
+  }
+
   body {
     background-color: var(--color-surface);
     color: var(--color-ink);
@@ -71,6 +86,13 @@
   }
   [data-tone="dark"] :focus-visible {
     outline-color: var(--color-amber);
+  }
+
+  /* One icon system: 1.5 stroke, square caps and mitred joins to match the square-cornered UI. */
+  .lucide {
+    stroke-width: 1.5;
+    stroke-linecap: square;
+    stroke-linejoin: miter;
   }
 
   /* Links inside running copy: underlined, per tone */
