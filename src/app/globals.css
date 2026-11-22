@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 /*
- * Design tokens: Tolvane_Design_System.md is the source of truth.
+ * Design tokens: DESIGN.md is the source of truth.
  * The default Tailwind palette is cleared, so only these colors exist as utilities.
  * Every text pairing used on the site appears in that file's contrast table.
  */

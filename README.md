@@ -27,7 +27,7 @@ The site is a static export (`out/`) served as Cloudflare Workers static assets 
 
 ## Design system
 
-Tokens come from `Tolvane_Design_System.md` and live in `src/app/globals.css` under `@theme`. The default Tailwind palette is cleared, so only design-system colors exist as utilities.
+Tokens come from `DESIGN.md` and live in `src/app/globals.css` under `@theme`. The default Tailwind palette is cleared, so only design-system colors exist as utilities.
 
 Sections alternate dark and light. Every page starts with an ink hero and ends with the ink quote band, so the surface footer always follows a dark section.
 
