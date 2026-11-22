@@ -9,7 +9,7 @@ export const capabilitiesPage = {
     eyebrow: "Capabilities",
     title: "Machining, EDM and inspection under one roof.",
     intro:
-      "Most critical parts need more than one process. Keeping them in one building gives you one quality system, one schedule and one team that knows your part.",
+      "Most critical parts need more than one process. We run them all in one building, so the same team and quality system follow your part from bar stock to final inspection.",
     facts: [
       { label: "Tightest tolerance", value: "±0.0001 in" },
       { label: "Best surface finish", value: "4 Ra µin" },
@@ -37,7 +37,7 @@ export const capabilitiesPage = {
         id: "mill-turn",
         title: "Mill-turn",
         body: "B-axis mill-turn centers complete turned parts with off-axis features in one cycle, so you are not paying for a second operation.",
-        bullets: ["Sub-spindle for back-side work", "Cross-drilled and angled ports", "Ideal for hydraulic and valve components"],
+        bullets: ["Sub-spindle for back-side work", "Cross-drilled and angled ports", "Common for hydraulic and valve components"],
       },
       {
         id: "edm",
@@ -62,7 +62,7 @@ export const capabilitiesPage = {
   tolerances: {
     eyebrow: "Tolerances",
     title: "What we hold, by process",
-    intro: "Typical values for production. Tighter is possible on specific features: send the drawing and we'll tell you honestly.",
+    intro: "Typical values for production. Specific features can often go tighter; send the drawing and we'll tell you what we can hold.",
     columns: ["Process", "Max part size", "Standard tolerance", "Precision tolerance", "Typical finish"],
     rows: [
       ["5-axis milling", "32 × 24 × 20 in", "±0.0010 in", "±0.0002 in", "32 Ra µin"],
@@ -75,7 +75,7 @@ export const capabilitiesPage = {
   materials: {
     eyebrow: "Materials",
     title: "Materials we machine every week",
-    intro: "Mill certs ship with every order, and full traceability is maintained from bar to box.",
+    intro: "Mill certs ship with every order, and we trace each lot from bar stock to the shipping box.",
     groups: [
       { name: "Aluminum", grades: ["6061-T6", "7075-T7351", "2024-T351", "MIC-6"] },
       { name: "Stainless steel", grades: ["303", "304/304L", "316/316L", "17-4 PH", "15-5 PH"] },

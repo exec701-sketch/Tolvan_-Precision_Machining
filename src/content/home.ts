@@ -8,7 +8,7 @@
 export const hero = {
   eyebrow: "Contract CNC machining · Grand Rapids, MI",
   title: "Parts that measure right the first time.",
-  body: "Tolvane mills, turns and EDMs critical components for aerospace, defense and medical OEMs. Send a drawing, get a quote you can plan around, and receive parts with the inspection data to prove them.",
+  body: "Tolvane mills, turns and EDMs critical components for aerospace, defense and medical OEMs. Send a drawing and you'll have a firm quote within 48 hours. The parts ship with the inspection data that proves them.",
   primary: { label: "Request a quote", href: "/contact#quote" },
   secondary: { label: "See capabilities", href: "/capabilities" },
   specs: [
@@ -31,7 +31,7 @@ export const capabilities = {
   eyebrow: "Capabilities",
   title: "One shop, every operation your part needs.",
   intro:
-    "Keeping milling, turning, EDM and inspection under one roof means fewer handoffs, one quality system and one accountable schedule.",
+    "Milling, turning, EDM and inspection all happen in this building, so your part never waits on another vendor and one schedule covers the whole job.",
   items: [
     {
       id: "five-axis",
@@ -116,7 +116,7 @@ export const process = {
     },
     {
       title: "Programming and fixturing",
-      body: "CAM programs are verified in simulation; fixtures are designed for repeatability, not just the first part.",
+      body: "CAM programs are verified in simulation, and fixtures are built to locate every part in the run the same way.",
     },
     {
       title: "First article inspection",
@@ -155,15 +155,15 @@ export const standard = {
     },
     {
       title: "Data with every shipment",
-      body: "Inspection results travel with the parts, not on request weeks later.",
+      body: "Inspection results ship in the box with the parts.",
     },
   ],
 };
 
 export const careers = {
   eyebrow: "Careers",
-  title: "Good machinists build good parts. We're hiring both.",
-  body: "We hire CNC machinists, programmers and quality inspectors who care about the last tenth. Day and second shifts, paid training on new equipment and a climate-controlled shop.",
+  title: "We're hiring on day and second shift.",
+  body: "We need CNC machinists, CAM programmers and CMM inspectors who care about the last tenth. You'll get paid training on new equipment and work in a climate-controlled shop.",
   cta: { label: "See open roles", href: "/about#careers" },
   roles: ["5-axis CNC machinist", "CAM programmer", "CMM inspector"],
 };
@@ -171,6 +171,6 @@ export const careers = {
 export const quoteBand = {
   eyebrow: "Request a quote",
   title: "Have a drawing? Get a firm quote in 48 hours.",
-  body: "Send a STEP file and PDF drawing with quantities. An engineer, not a form bot, replies with pricing, lead time and any DFM notes.",
+  body: "Send a STEP file and PDF drawing with quantities. An engineer replies with pricing, lead time and any DFM notes.",
   primary: { label: "Start a quote", href: "/contact#quote" },
 };

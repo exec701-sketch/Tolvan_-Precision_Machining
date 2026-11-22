@@ -13,7 +13,7 @@ export const aboutPage = {
   },
   story: {
     eyebrow: "Our story",
-    title: "Two lathes, one promise, twenty-two years",
+    title: "From a rented bay to 38,000 square feet",
     paragraphs: [
       "Founders Dana and Luis Tolvane opened the shop in a rented bay after years of watching good parts fail inspection because nobody owned the details. Their rule was simple: if the drawing says it, we hold it, and if we can't, we say so before we start.",
       "That rule brought repeat work from aerospace suppliers, then medical OEMs, then defense primes. The shop moved to Foundry Row in 2015 and added a dedicated inspection lab in 2019.",
@@ -40,7 +40,7 @@ export const aboutPage = {
   },
   careers: {
     eyebrow: "Careers",
-    title: "Build a career, not just parts",
+    title: "Work at Tolvane",
     intro:
       "We offer competitive pay, health and retirement benefits, a shift differential, and a clean, climate-controlled shop. Send a résumé to the address below, or call and ask for a shop tour.",
     benefitsHeading: "What you get",

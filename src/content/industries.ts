@@ -7,9 +7,9 @@ export const industriesPage = {
   },
   hero: {
     eyebrow: "Industries",
-    title: "Parts for programs where failure isn't an option.",
+    title: "Parts for regulated programs.",
     intro:
-      "Each industry has its own paperwork, materials and inspection habits. We've built our process around the strictest of them, so the rest come easily.",
+      "Each industry has its own paperwork, materials and inspection requirements. Our process is built to aerospace and medical rules, which are the strictest we see, so most other programs fit inside it.",
   },
   listHeading: { eyebrow: "Who we build for", title: "Industries we serve" },
   items: [
@@ -34,7 +34,7 @@ export const industriesPage = {
     {
       id: "space",
       label: "Space and satellite",
-      body: "Lightweighted structures and thermal hardware where every gram counts and outgassing-friendly materials matter.",
+      body: "Lightweighted structures and thermal hardware, pocketed to save mass and made from low-outgassing materials.",
       parts: ["Satellite brackets", "Thermal straps and plates", "Propulsion fittings"],
     },
     {

@@ -11,9 +11,9 @@ export const equipmentPage = {
   },
   hero: {
     eyebrow: "Equipment",
-    title: "Modern machines, maintained like they matter.",
+    title: "Twenty CNC machines, checked for accuracy every quarter.",
     intro:
-      "Our equipment runs on a preventive maintenance schedule and is checked for accuracy every quarter, because a machine is only as precise as its last calibration.",
+      "Between those checks, every machine runs on a preventive maintenance schedule.",
   },
   machining: {
     eyebrow: "Machining",

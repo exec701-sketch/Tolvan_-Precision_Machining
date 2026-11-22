@@ -48,7 +48,7 @@ export default function IndustriesPage() {
         </Container>
       </Section>
 
-      <QuoteBand title="Building for a regulated program? Let's review your requirements." />
+      <QuoteBand title="Building for a regulated program? Send the requirements with your drawing." />
     </>
   );
 }

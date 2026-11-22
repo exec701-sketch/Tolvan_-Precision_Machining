@@ -7,13 +7,13 @@ export const qualityPage = {
   },
   hero: {
     eyebrow: "Quality",
-    title: "Inspection is part of the process, not the end of it.",
+    title: "We inspect during the run as well as at the end.",
     intro:
       "Our quality system is audited by third-party registrars and by the customers who rely on us. Every part is measured against the drawing before it leaves.",
   },
   certs: {
     eyebrow: "Certifications",
-    title: "Registered, audited and current",
+    title: "Current registrations",
     items: [
       {
         code: "AS9100D",
@@ -23,7 +23,7 @@ export const qualityPage = {
       {
         code: "ISO 9001:2015",
         name: "Quality management",
-        body: "The foundation of our documented processes, corrective action system and continual improvement program.",
+        body: "Covers our documented processes, corrective action system and continual improvement program.",
       },
       {
         code: "ISO 13485:2016",
